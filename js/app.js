@@ -52,8 +52,11 @@ const domElement = document.querySelector('.infos');
         const singolarInfo = infoTeamArray[i];
         console.log(singolarInfo.nome, singolarInfo.ruolo, singolarInfo.foto);
 
+        const domElementInfo = document.createElement('div')
+        domElementInfo.className = 'col'
+        domElement.append(domElementInfo)
         //STAMPARE LE STESSE INFORMAZIONI SUL DOM SEMPLICEMENTE COME STRINGA
-        domElement.append('workers name: '+ singolarInfo.nome,' workers role ' + singolarInfo.ruolo,' workers photo ' +singolarInfo.foto)
+        domElementInfo.innerHTML = `${singolarInfo.nome},${singolarInfo.ruolo},${singolarInfo.foto}`
     }
 
 
