@@ -44,13 +44,25 @@ const infoTeamArray = [
     },
 ]
 
+const domElement = document.querySelector('.infos');
 
 // STAMPARE IN CONSOLE LE INFORMAZIONI PER OGNI MEMBRO
 
-for (let i = 0; i < infoTeamArray.length; i++) {
-    const singolarInfo = infoTeamArray[i]
-    console.log(singolarInfo);
-}
+    for (let i = 0; i < infoTeamArray.length; i++) {
+        const singolarInfo = infoTeamArray[i];
+        console.log(singolarInfo.nome, singolarInfo.ruolo, singolarInfo.foto);
+
+        //STAMPARE LE STESSE INFORMAZIONI SUL DOM SEMPLICEMENTE COME STRINGA
+        domElement.append('workers name: '+ singolarInfo.nome,' workers role ' + singolarInfo.ruolo,' workers photo ' +singolarInfo.foto)
+    }
 
 
-//STAMPARE LE STESSE INFORMAZIONI SUL DOM SEMPLICEMENTE COME STRINGA
+
+
+
+
+
+
+
+
+
